@@ -8,30 +8,131 @@
 int main() {
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
+    char estado1;
+    char codigo1[4];
+    char cidade1[50];
+    int populacao1, pontosTuristicos1;
+    float area1, pib1, densidade1, pibPerCapita1, superPoder1;
 
+    //Declaração das variaveis da segunda carta.
+    char estado2;
+    char codigo2[4];
+    char cidade2[50];
+    int populacao2, pontosTuristicos2;
+    float area2, pib2, densidade2, pibPerCapita2, superPoder2;
     
     // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+    
+    printf("### Carta 1 ###\n");
+    printf("Digite o estado (A-H): ");
+    scanf(" %c", &estado1);
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    printf("Digite o codigo da carta (ex: A01): ");
+    scanf("%s", codigo1);
+
+    printf("Digite o nome da cidade: ");
+    scanf(" %[^\n]s", cidade1);
+
+    printf("Digite a polulação da cidade: ");
+    scanf("%d", &populacao1);
+
+    printf("Digite a area da cidade (km²): ");
+    scanf("%f", &area1);
+
+    printf("Digite o PIB da cidade: ");
+    scanf("%f", &pib1);
+
+    printf("Digite o numero de pontos turisticos: ");
+    scanf("%d", &pontosTuristicos1);
+
+    //Calculo da primeira carta. (Densidade e PIB)
+    if (area1 !=0){
+        densidade1 = populacao1 / area1;
+    } else {
+        densidade1 = 0;
+    }
+    if (populacao1 !=0){
+        pibPerCapita1 = pib1 / populacao1;
+    } else {
+        pibPerCapita1 = 0;
+    }
+    
+    //Cadastro dos dados da segunda carta.
+    printf("\n=== Carta 2 ===\n");
+    printf("Digite o estado (A-H): ");
+    scanf(" %c", &estado2);
+
+    printf("Digite o codigo da carta (ex: A01): ");
+    scanf("%s", codigo2);
+
+    printf("Digite o nome da cidade: ");
+    scanf(" %[^\n]s", cidade2);
+
+    printf("Digite a polulação da cidade: ");
+    scanf("%d", &populacao2);
+
+    printf("Digite a area da cidade (km²): ");
+    scanf("%f", &area2);
+
+    printf("Digite o PIB da cidade: ");
+    scanf("%f", &pib2);
+
+    printf("Digite o número de pontos turisticos da cidade: ");
+    scanf("%d", &pontosTuristicos2);
+
+    //Calculo da segunda carta. (Densidade e PIB)
+    if (area2 !=0){
+        densidade2 = populacao2 / area2;
+    } else {
+        densidade2 = 0;
+    }
+    if (populacao2 !=0){
+        pibPerCapita2 = pib2 / populacao2;
+    } else{
+        pibPerCapita2 = 0;
+    }
 
     // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+    // Comparação da População:
+    if (populacao1 > populacao2){
+        printf("A carta 1 Ganhou\n");
+    } else {
+        printf("A carta 2 Ganhou\n");
+    }
+    // Comparação da Area:
+    if (area1 > area2){
+        printf("A carta 1 Ganhou");
+    } else {
+        printf("A carta 2 ganhou");
+    }
+    //Comparação do PIB:
+    if (pib1 > pib2){
+        printf("A carta 1 Ganhou");
+    } else {
+        printf("A carta 2 ganhou");
+    }
+    
+    //Comparação dos Pontos Turisticos?:
+    if (pontosTuristicos1 > pontosTuristicos2){
+        printf("A carta 1 Ganhou");
+    } else {
+        printf("A carta 2 ganhou");
+    }
 
+    // Comparação do PIB Per Capita:
+    if (pibPerCapita1 > pibPerCapita2){
+        printf("A carta 1 Ganhou");
+    } else {
+        printf("A carta 2 ganhou");
+    }
+    
+    //Comparação da Densidade: (menor ganha)
+    if (densidade1 > densidade2){
+        printf("A carta 2 Ganhou");
+    } else {
+        printf("A carta 1 ganhou");
+    }
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
     // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
