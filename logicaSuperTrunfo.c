@@ -133,6 +133,14 @@ int main() {
     } else {
         printf("A segunda cidade tem a maior densidade populacional! \n");
     }
+
+    // Comparação de Super Poder.
+    if (superPoder1 > superPoder2){
+        printf("A primeira cidade tem o maior Super Poder e foi a Vencedora!\n");
+    } else {
+        printf("A segunda cidade tem o maior Super Poder e foi a Vencedora!\n");
+    }
+    
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
     // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
