@@ -96,42 +96,42 @@ int main() {
 
     // Comparação da População:
     if (populacao1 > populacao2){
-        printf("A carta 1 Ganhou\n");
+        printf("A primeira cidade tem a maior população!\n");
     } else {
-        printf("A carta 2 Ganhou\n");
+        printf("A segunda cidade tem a maior população!\n");
     }
     // Comparação da Area:
     if (area1 > area2){
-        printf("A carta 1 Ganhou");
+        printf("A primeira cidade tem a maior Area (km²)!\n");
     } else {
-        printf("A carta 2 ganhou");
+        printf("A segunda cidade tem a maior Area (km²)!\n");
     }
     //Comparação do PIB:
     if (pib1 > pib2){
-        printf("A carta 1 Ganhou");
+        printf("A primeira cidade tem o maior PIB!\n");
     } else {
-        printf("A carta 2 ganhou");
+        printf("A segunda cidade tem o maior PIB!\n");
     }
     
     //Comparação dos Pontos Turisticos?:
     if (pontosTuristicos1 > pontosTuristicos2){
-        printf("A carta 1 Ganhou");
+        printf("A primeira cidade tem mais pontos turisticos!\n");
     } else {
-        printf("A carta 2 ganhou");
+        printf("A segunda cidade tem mais pontos turisticos!\n");
     }
 
     // Comparação do PIB Per Capita:
     if (pibPerCapita1 > pibPerCapita2){
-        printf("A carta 1 Ganhou");
+        printf("A primeira cidade tem o maior PIBPERCAPITA!\n");
     } else {
-        printf("A carta 2 ganhou");
+        printf("A segunda cidade tem o maior PIBPERCAPITA!\n");
     }
     
     //Comparação da Densidade: (menor ganha)
-    if (densidade1 > densidade2){
-        printf("A carta 2 Ganhou");
+    if (densidade2 > densidade1){
+        printf("A primeira cidade tem a menor densidade populacional!\n");
     } else {
-        printf("A carta 1 ganhou");
+        printf("A segunda cidade tem a maior densidade populacional! \n");
     }
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
